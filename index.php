@@ -7,26 +7,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Credit Login / Register Form a Responsive Widget Template :: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Credit Login / Register Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Custom Theme files -->
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- //Custom Theme files -->
-<!-- web font -->
-<link href="//fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
-<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <title>Credit Login / Register Form a Responsive Widget Template :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords"
+          content="Credit Login / Register Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-<!-- //web font -->
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        } </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <!-- Custom Theme files -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/form_style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- //Custom Theme files -->
+    <!-- web font -->
+    <link href="//fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- //web font -->
 </head>
 <body>
 
 <?php
-    session_start();
+session_start();
 //    if ($_SESSION['loggedIn'] && $_SESSION['loggedIn'] == true) {
 //        header("Location: home.php");
 //    }
@@ -34,111 +45,177 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <h1>Credit Login / Register Form</h1>
 <div class="main-agileits">
-<!--form-stars-here-->
-		<div class="form-w3-agile">
-			<h2>Credit login form</h2>
-			<form action="php/login.php" method="post">
-				<div class="form-sub-w3">
-					<input type="text" name="login_email" placeholder="Customer number or username " required="" />
-				<div class="icon-w3">
-					<i class="fa fa-user" aria-hidden="true"></i>
-				</div>
-				</div>
-				<div class="form-sub-w3">
-					<input type="password" name="login_password" placeholder="Password" required="" />
-				<div class="icon-w3">
-					<i class="fa fa-unlock-alt" aria-hidden="true"></i>
-				</div>
-				</div>
-                <div class="error">
+    <!--form-stars-here-->
+    <div class="form-w3-agile">
+        <h2>Credit login form</h2>
+        <form action="#" method="post">
+            <div class="form-sub-w3">
+                <input type="text"  id="login_email" name="login_email" placeholder="Customer number or username "/>
+                <div class="icon-w3">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="form-sub-w3">
+                <input type="password" name="login_password" id="login_password" placeholder="Password"/>
+                <div class="icon-w3">
+                    <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="error">
                     <span>
                         <?php
-                        if ($_SESSION['error']) {
-                            echo $_SESSION['error'];
-                        }
+//                        if (isset($_POST['login_submit'])){
+//                            if ($_SESSION['error']) {
+//                                echo $_SESSION['error'];
+//                            }
+//                        }
+
                         ?>
                     </span>
-                </div>
-				<p class="p-bottom-w3ls">Are you new to eBanking?<a class="w3_play_icon1" href="#small-dialog1">  Register here</a></p>
-				
-				<div class="submit-w3l">
-					<input name="login_submit" type="submit" value="Login">
-				</div>
-			</form>
-		</div>
+            </div>
+            <p class="p-bottom-w3ls">Are you new to eBanking?<a class="w3_play_icon1" href="#small-dialog1"> Register
+                    here</a></p>
 
-<!--//form-ends-here-->
+            <div class="submit-w3l">
+                <input name="login_submit" id="login" type="button" value="Login">
+            </div>
+        </form>
+    </div>
+
+    <!--//form-ends-here-->
 </div>
 <div id="small-dialog1" class="mfp-hide">
-					<div class="contact-form1">
-										<div class="contact-w3-agileits">
-										<h3>Register Form</h3>
-											<form action="php/register.php" method="post">
-												<div class="form-sub-w3ls">
-													<input name = "reg_first_name" placeholder="First name"  type="text" required="">
-													<div class="icon-agile">
-														<i class="fa fa-user" aria-hidden="true"></i>
-													</div>
-												</div>
-                                                <div class="form-sub-w3ls">
-                                                    <input name = "reg_last_name" placeholder="Last name"  type="text" required="">
-                                                    <div class="icon-agile">
-                                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                                    </div>
-                                                </div>
-												<div class="form-sub-w3ls">
-													<input name="reg_email" placeholder="Email" class="mail" type="email" required="">
-													<div class="icon-agile">
-														<i class="fa fa-envelope-o" aria-hidden="true"></i>
-													</div>
-												</div>
-												<div class="form-sub-w3ls">
-													<input name="reg_password" placeholder="Password"  type="password" required="">
-													<div class="icon-agile">
-														<i class="fa fa-unlock-alt" aria-hidden="true"></i>
-													</div>
-												</div>
-												<div class="form-sub-w3ls">
-													<input placeholder="Confirm Password"  type="password" required="">
-													<div class="icon-agile">
-														<i class="fa fa-unlock-alt" aria-hidden="true"></i>
-													</div>
-												</div>
-											</div>
-											<div class="login-check">
-								 			 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><p>I Accept Terms & Conditions</p></label>
-					</div>
-										<div class="submit-w3l">
-											<input name="reg_submit" type="submit" value="Register">
-										</div>
-										</form>
-					</div>
-				</div>
+    <div class="contact-form1">
+        <div class="contact-w3-agileits">
+            <h3>Register Form</h3>
+            <form id="register-form" action="php/register.php" method="post">
+                <div class="form-sub-w3ls">
+                    <input name="reg_first_name" placeholder="First name" type="text">
+                    <div class="icon-agile">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="form-sub-w3ls">
+                    <input name="reg_last_name" placeholder="Last name" type="text">
+                    <div class="icon-agile">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="form-sub-w3ls">
+                    <input name="reg_email" placeholder="Email" class="mail" type="email">
+                    <div class="icon-agile">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="form-sub-w3ls">
+                    <input passwordCheck="passwordCheck" id="password" name="reg_password" placeholder="Password"
+                           type="password">
+                    <div class="icon-agile">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="form-sub-w3ls">
+                    <input id="reg_confirm_password" placeholder="Confirm Password" name="reg_confirm_password"
+                           type="password">
+                    <div class="icon-agile">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    </div>
+                </div>
+        </div>
+        <div class="login-check">
+            <label for="register_checkbox" class="checkbox">
+                <input type="checkbox" id="register_checkbox" name="register_checkbox" checked="">
+                <p>I Accept Terms & Conditions</p>
+            </label>
+        </div>
+        <!--        <div id="error_placement">-->
+        <!--            <label class='error_message'></label>-->
+        <!--        </div>-->
+        <div class="submit-w3l">
+            <input id="reg_submit" name="reg_submit" type="submit" value="Register">
+        </div>
+        </form>
+    </div>
+</div>
 
 <!-- copyright -->
-	<div class="copyright w3-agile">
-		<p> © 2017 Credit Login / Register Form . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
-	</div>
-	<!-- //copyright --> 
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<!-- pop-up-box -->  
-		<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
-	<!--//pop-up-box -->
-	<script>
-		$(document).ready(function() {
-		$('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
-			type: 'inline',
-			fixedContentPos: false,
-			fixedBgPos: true,
-			overflowY: 'auto',
-			closeBtnInside: true,
-			preloader: false,
-			midClick: true,
-			removalDelay: 300,
-			mainClass: 'my-mfp-zoom-in'
-		});
-																		
-		});
-	</script>
+<div class="copyright w3-agile">
+    <p> © 2017 Credit Login / Register Form . All rights reserved | Design by <a href="http://w3layouts.com/"
+                                                                                 target="_blank">W3layouts</a></p>
+</div>
+<!-- //copyright -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- pop-up-box -->
+<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+<script src="js/form-validation.js"></script>
+<!--//pop-up-box -->
+<script>
+    $(document).ready(function () {
+        $('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
+            type: 'inline',
+            fixedContentPos: false,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+    });
+
+    $("#register-form").validate({
+        rules: {
+            reg_first_name: "required",
+            reg_last_name: "required",
+            reg_email: "required",
+            reg_password: {
+                required: true,
+                minlength: 8,
+                passwordCheck: true
+            },
+            reg_confirm_password: {
+                equalTo: "#password"
+            },
+            register_checkbox: "required"
+        },
+        messages: {
+            reg_first_name: "Please let us know what your first name is.",
+            reg_last_name: "Please enter your last name",
+            reg_email: "Please provide an email account",
+            reg_password: {
+                required: "Please provide a password",
+                minlength: "Password must be at least 8 characters",
+                passwordCheck: "Password must contain at least a capital letter and a number"
+            },
+            reg_confirm_password: "Passwords don't match",
+            register_checkbox: "Check the checkbox"
+        },
+        errorPlacement: function (label, element) {
+            label.addClass('error_span');
+            label.insertAfter(element);
+        },
+        wrapper: 'span'
+    });
+
+    jQuery.validator.addMethod("passwordCheck",
+        function (value, element, param) {
+            if (this.optional(element)) {
+                return true;
+            } else if (!/[A-Z]/.test(value)) {
+                return false;
+            } else if (!/[a-z]/.test(value)) {
+                return false;
+            } else if (!/[0-9]/.test(value)) {
+                return false;
+            }
+
+            return true;
+        },);
+
+</script>
 </body>
 </html>

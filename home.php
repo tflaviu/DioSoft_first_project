@@ -9,6 +9,9 @@
 <body>
 <?php
 session_start();
+if ($_SESSION['loggedIn'] != true) {
+    header("Location: index.php");
+}
 include_once "php/connect.php";
 
 $db = dbConnect();

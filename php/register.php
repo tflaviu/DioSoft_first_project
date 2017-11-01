@@ -13,14 +13,22 @@ include_once "connect.php";
     $last_name = $_POST['reg_last_name'];
     $email = $_POST['reg_email'];
     $password = $_POST['reg_password'];
+    $confirm_password = $_POST['reg_confirm_password'];
 
-    $sql = "INSERT INTO users (first_name, last_name, email, password) VALUES ('$first_name', '$last_name', '$email', '$password')";
-    $result = $db->query($sql);
+    if ($password != $confirm_password) {
+        echo "Passwords don't match!";
+        die;
+    }  else{
+        $sql = "INSERT INTO users (first_name, last_name, email, password) VALUES ('$first_name', '$last_name', '$email', '$password')";
+        $result = $db->query($sql);
 
-    if ($result) {
-        $_SESSION['loggedEmail'] = $email;
-        $_SESSION['loggedIn'] = true;
-        header("Location: ../home.php");
-    } else {
-        echo "Error";
+        if ($result) {
+            session_start();
+            $_SESSION['loggedEmail'] = $email;
+            $_SESSION['loggedIn'] = true;
+            header("Location: ../home.php");
+        } else {
+            echo "Error";
+        }
     }
+
